@@ -40,9 +40,3 @@
 - git commit -m "Demo"
 - git push heroku master
 - heroku open
-
-
-
-
-
-
