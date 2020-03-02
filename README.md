@@ -55,19 +55,21 @@
 
 	Pay attention to the above database user and connection url as we will use it in the following steps.
 
-6. In the DATABASE section of yourapp/settings.py, set the DATABASES['TEST']['NAME'] key with the database name of the new db, e.g. d1jjjjjjj23b
+6. Configure Django db settings-	
+
+	In the DATABASE section of yourapp/settings.py, set the DATABASES['TEST']['NAME'] key with the database name of the new db, e.g. d1jjjjjjj23b
 
 	Visit here for example: https://simpleit.rocks/python/django/use-postgresql-database-in-heroku-for-testing-django/
 
 7. Set DATABASE_URL environment-
 
-For Linux/Mac,
+	For Linux/Mac,
 	
-	export DATABASE_URL='<connection URL>'
+		export DATABASE_URL='<connection URL>'
 
-For Windows,
+	For Windows,
 	
-	set DATABASE_URL='<connection URL>'
+		set DATABASE_URL='<connection URL>'
 
 # Deploy again after changes:
 - git add .
