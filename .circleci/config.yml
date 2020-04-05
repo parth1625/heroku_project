@@ -30,9 +30,9 @@ jobs:
       - run:
           name: AWS EC2 deploy
           command: |
-            ssh -o StrictHostKeyChecking=no ubuntu@52.66.248.136 
-            cd heroku_project
-            git fetch
+            ssh -o StrictHostKeyChecking=no ubuntu@52.66.248.136 && \ 
+            cd heroku_project && \
+            git fetch  && \
             git pull
 workflows:
   version: 2
