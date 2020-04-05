@@ -31,7 +31,7 @@ jobs:
           name: AWS EC2 deploy
           command: |
             ssh -o StrictHostKeyChecking=no ubuntu@ec2-52-66-248-136.ap-south-1.compute.amazonaws.com \
-            pwd && sudo mkdir test && ls
+            pwd && ls  
             
 workflows:
   version: 2
