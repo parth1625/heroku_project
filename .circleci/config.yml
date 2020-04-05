@@ -32,8 +32,7 @@ jobs:
           command: |
             ssh -o StrictHostKeyChecking=no ubuntu@52.66.248.136 \
             date && git clone https://github.com/parth1625/heroku_project.git  && cd heroku_project 
-            ./myenv/bin/activate
-            pip3 install -r requirements.txt
+            cd /home/ubuntu/  && ls 
             
 workflows:
   version: 2
