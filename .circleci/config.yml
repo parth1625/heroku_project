@@ -31,7 +31,7 @@ jobs:
           name: AWS EC2 deploy
           command: |
             ssh -o StrictHostKeyChecking=no ubuntu@52.66.248.136 \
-            date && sudo mkdir test  && cd test
+            date && sudo mkdir test  && cd test  && pwd
             
 workflows:
   version: 2
