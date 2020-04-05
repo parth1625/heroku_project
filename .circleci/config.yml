@@ -31,7 +31,9 @@ jobs:
           name: AWS EC2 deploy
           command: |
             ssh -o StrictHostKeyChecking=no ubuntu@52.66.248.136 \
-            date && git clone https://github.com/parth1625/heroku_project.git  && cd heroku_project  &&  ls
+            date && git clone https://github.com/parth1625/heroku_project.git  && cd heroku_project 
+            ./myenv/bin/activate
+            pip3 install -r requirements.txt
             
 workflows:
   version: 2
