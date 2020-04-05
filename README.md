@@ -43,7 +43,7 @@
 
 3. Create the databse on Heroku-
 	
-		heroku addons:create heroku-postgresql:hobby-dev
+		heroku addons:create heroku-postgresql:hobby-dev	
 
 4. See the details of the database url-
 		
