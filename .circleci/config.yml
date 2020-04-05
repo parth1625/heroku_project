@@ -31,7 +31,7 @@ jobs:
           name: AWS EC2 deploy
           command: |
             ssh -o StrictHostKeyChecking=no ubuntu@52.66.248.136 \
-            pwd && cd heroku_project  && ls 
+            pwd &&  ls 
             cd /var/www/ && ls
             
 workflows:
