@@ -31,8 +31,8 @@ jobs:
           name: AWS EC2 deploy
           command: |
             ssh -o StrictHostKeyChecking=no ubuntu@52.66.248.136 \ 
-            echo "Start deploy" \
-            pwd 
+            echo "Start deploy" && \
+            ls
             
 workflows:
   version: 2
