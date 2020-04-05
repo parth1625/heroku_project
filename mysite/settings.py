@@ -77,16 +77,23 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'heroku_project',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
-DATABASES['default']=dj_database_url.config(default='postgres://ilnthyzjvupbgc:32468af3809dc3280efb110d7c35296e38f5f640c088294f1631ec4c04ed23fc@ec2-3-213-192-58.compute-1.amazonaws.com:5432/dc78fbs8hj9b1b')
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'heroku_project',
+#         'USER': '',
+#         'PASSWORD': '',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
+
+# DATABASES['default']=dj_database_url.config(default='postgres://ilnthyzjvupbgc:32468af3809dc3280efb110d7c35296e38f5f640c088294f1631ec4c04ed23fc@ec2-3-213-192-58.compute-1.amazonaws.com:5432/dc78fbs8hj9b1b')
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
