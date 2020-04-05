@@ -25,7 +25,7 @@ jobs:
           destination: python_app
   deploy:
     docker:
-      - image: circleci/node:chakracore-8.11.1
+      - image: circleci/python:3.6
     steps:
       - run:
           name: AWS EC2 deploy
@@ -34,3 +34,11 @@ jobs:
             cd heroku_project
             git fetch
             git pull
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
