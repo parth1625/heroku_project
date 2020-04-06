@@ -32,8 +32,7 @@ jobs:
       - run:
           name: AWS EC2 deploy
           command: |
-            scp -r -o StrictHostKeyChecking=no ./deploy.sh ubuntu@ec2-52-66-248-136.ap-south-1.compute.amazonaws.com:/home/ubuntu/
-            ssh -o StrictHostKeyChecking=no ubuntu@ec2-52-66-248-136.ap-south-1.compute.amazonaws.com "bahs deploy.sh" \ 
+            ssh -o StrictHostKeyChecking=no ubuntu@ec2-52-66-248-136.ap-south-1.compute.amazonaws.com "bash deploy.sh" \ 
 
 workflows:
   version: 2
