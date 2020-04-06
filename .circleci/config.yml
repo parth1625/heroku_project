@@ -32,8 +32,8 @@ jobs:
       - run:
           name: AWS EC2 deploy
           command: |
-            ssh -o StrictHostKeyChecking=no ubuntu@ec2-52-66-248-136.ap-south-1.compute.amazonaws.com \ 
-            "cd heroku_project && ls"
+            scp -r -o StrictHostKeyChecking=no ./ ubuntu@ec2-52-66-248-136.ap-south-1.compute.amazonaws.com:/home/ubuntu/
+            ssh -o StrictHostKeyChecking=no ubuntu@ec2-52-66-248-136.ap-south-1.compute.amazonaws.com "deploy.sh" \ 
 
 workflows:
   version: 2
