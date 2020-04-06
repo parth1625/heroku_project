@@ -24,6 +24,8 @@ jobs:
           path: test-reports/
           destination: python_app
   deploy:
+    docker:
+      - image: circleci/python:3.6
     steps:
       - run:
           name: AWS EC2 deploy
